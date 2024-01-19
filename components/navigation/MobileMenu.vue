@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>Mobile Menu</div>
 </template>
 
 <script>
