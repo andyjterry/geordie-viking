@@ -1,0 +1,149 @@
+<template>
+  <div>
+    <h2>European Countries</h2>
+    <p>Total European Countries Visited: {{ totalEuropeanCountriesVisited }}</p>
+    <p>Total European Countries Not Visited: {{ totalEuropeanCountriesNotVisited }}</p>
+    <p>You have visited {{ percentageVisited }}% of European countries.</p>
+    <h3>Visited European Countries</h3>
+    <ul>
+      <li v-for="(trips, country) in sortedGroupedTrips" :key="country">
+        <strong>{{ country }}</strong>
+        <ul>
+          <li v-for="trip in trips" :key="trip.city">
+            {{ trip.city }}, {{ formatDate(trip.arrivalDate) }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>European Countries Not Visited</h3>
+    <ul>
+      <li v-for="country in europeanNotVisitedList" :key="country">{{ country }}</li>
+    </ul>
+
+    <h2>Trips Outside Europe</h2>
+    <div v-for="(continentData, continent) in tripsOutsideEurope" :key="continent">
+      <h3>{{ continent }}</h3>
+      <ul>
+        <li v-for="countryData in continentData" :key="countryData.country">
+          <strong>{{ countryData.country }}</strong>
+          <ul>
+            <li v-for="trip in countryData.trips" :key="trip.city">
+              {{ trip.city }}, {{ formatDate(trip.arrivalDate) }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+import allCountriesData from '@/json/allCountries.json';
+import travelData from '@/json/travelData.json';
+
+export default {
+  computed: {
+    totalEuropeanCountriesVisited() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const visitedEuropeanCountries = travelData.travels
+          .filter(trip => europeanCountries.includes(trip.country) || trip.country === 'Wales' || trip.country === 'Scotland');
+      const uniqueVisitedCountries = [...new Set(visitedEuropeanCountries.map(trip => trip.country))];
+      return uniqueVisitedCountries.length;
+    },
+    totalEuropeanCountriesNotVisited() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const totalEuropeanCountries = europeanCountries.length + 2; // Adding 2 for Wales and Scotland
+      return totalEuropeanCountries - this.totalEuropeanCountriesVisited;
+    },
+    percentageVisited() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const visitedEuropeanCountries = travelData.travels
+          .filter(trip => europeanCountries.includes(trip.country) || trip.country === 'Wales' || trip.country === 'Scotland');
+      const uniqueVisitedCountries = [...new Set(visitedEuropeanCountries.map(trip => trip.country))];
+      return ((uniqueVisitedCountries.length / (europeanCountries.length + 2)) * 100).toFixed(2);
+    },
+    groupedTrips() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const visitedTrips = travelData.travels
+          .filter(trip => europeanCountries.includes(trip.country) || trip.country === 'Wales' || trip.country === 'Scotland');
+      const grouped = {};
+
+      visitedTrips.forEach(trip => {
+        if (!grouped[trip.country]) {
+          grouped[trip.country] = [];
+        }
+        grouped[trip.country].push(trip);
+      });
+
+      return grouped;
+    },
+    sortedGroupedTrips() {
+      const grouped = this.groupedTrips;
+      // Sort the countries based on the number of trips in descending order
+      const sortedCountries = Object.keys(grouped).sort((a, b) => grouped[b].length - grouped[a].length);
+      const sortedGrouped = {};
+
+      sortedCountries.forEach(country => {
+        sortedGrouped[country] = grouped[country];
+      });
+
+      return sortedGrouped;
+    },
+    europeanNotVisitedList() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const visitedCountriesSet = new Set();
+
+      travelData.travels.forEach(trip => {
+        if (europeanCountries.includes(trip.country) || trip.country === 'Wales' || trip.country === 'Scotland') {
+          visitedCountriesSet.add(trip.country);
+        }
+      });
+
+      const notVisitedCountries = europeanCountries.filter(country => !visitedCountriesSet.has(country));
+      return notVisitedCountries;
+    },
+    tripsOutsideEurope() {
+      const europeanCountries = allCountriesData.continents.Europe;
+      const tripsOutsideEurope = {};
+
+      travelData.travels.forEach((trip) => {
+        if (!europeanCountries.includes(trip.country) && trip.country !== 'Wales' && trip.country !== 'Scotland') {
+          const continent = this.getContinent(trip.country);
+          if (!tripsOutsideEurope[continent]) {
+            tripsOutsideEurope[continent] = [];
+          }
+
+          const countryData = tripsOutsideEurope[continent].find(
+              (countryData) => countryData.country === trip.country
+          );
+
+          if (!countryData) {
+            tripsOutsideEurope[continent].push({
+              country: trip.country,
+              trips: [trip],
+            });
+          } else {
+            countryData.trips.push(trip);
+          }
+        }
+      });
+
+      return tripsOutsideEurope;
+    },
+  },
+  methods: {
+    formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long' };
+      return new Date(dateString).toLocaleDateString(undefined, options);
+    },
+    getContinent(country) {
+      for (const continent in allCountriesData.continents) {
+        if (allCountriesData.continents[continent].includes(country)) {
+          return continent;
+        }
+      }
+      return 'Other';
+    },
+  },
+};
+</script>

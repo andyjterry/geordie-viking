@@ -1,0 +1,51 @@
+{
+  "continents": {
+    "Europe": [
+      "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina",
+      "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia",
+      "Faroe Islands", "Finland", "France", "Germany", "Gibraltar", "Greece",
+      "Guernsey", "Hungary", "Iceland", "Ireland", "Isle of Man",
+      "Italy", "Jersey", "Kosovo", "Latvia", "Liechtenstein", "Lithuania",
+      "Luxembourg", "Macedonia", "Malta", "Moldova", "Monaco", "Montenegro",
+      "Netherlands", "Northern Ireland", "Norway", "Poland", "Portugal", "Romania", "Russia",
+      "San Marino", "Scotland", "Serbia", "Slovakia", "Slovenia", "Spain", "Svalbard and Jan Mayen",
+      "Sweden", "Switzerland", "Ukraine", "Vatican City", "Wales"
+    ],
+    "North America": [
+      "Canada", "United States", "Mexico", "Bermuda", "Bahamas", "Cuba", "Jamaica", "Haiti",
+      "Dominican Republic", "Guadeloupe", "Martinique", "Saint Martin", "Sint Maarten",
+      "Cayman Islands", "Turks and Caicos Islands", "British Virgin Islands", "United States Virgin Islands",
+      "Puerto Rico", "Anguilla", "Saint Kitts and Nevis", "Antigua and Barbuda", "Montserrat",
+      "Guatemala", "Belize", "Honduras", "El Salvador", "Nicaragua", "Costa Rica", "Panama"
+    ],
+    "South America": [
+      "Colombia", "Venezuela", "Guyana", "Suriname", "French Guiana", "Brazil", "Ecuador",
+      "Peru", "Bolivia", "Paraguay", "Chile", "Argentina", "Uruguay"
+    ],
+    "Asia": [
+      "Kazakhstan", "Russia", "Turkey", "Cyprus", "Syria", "Lebanon", "Israel", "Jordan",
+      "Saudi Arabia", "Yemen", "Oman", "United Arab Emirates", "Qatar", "Bahrain", "Kuwait",
+      "Iraq", "Iran", "Afghanistan", "Pakistan", "Tajikistan", "Turkmenistan", "Uzbekistan",
+      "Kyrgyzstan", "China", "Mongolia", "India", "Nepal", "Bhutan", "Bangladesh", "Myanmar",
+      "Sri Lanka", "Maldives", "Pakistan", "Malaysia", "Singapore", "Brunei", "Indonesia",
+      "Timor-Leste", "Philippines", "Japan", "North Korea", "South Korea", "Vietnam", "Laos",
+      "Cambodia", "Thailand", "Myanmar", "Bangladesh", "Bhutan", "Nepal", "Sri Lanka", "Maldives"
+    ],
+    "Africa": [
+      "Morocco", "Algeria", "Tunisia", "Libya", "Egypt", "Western Sahara", "Mauritania", "Mali",
+      "Niger", "Chad", "Sudan", "Eritrea", "Djibouti", "Somalia", "Ethiopia", "South Sudan", "Uganda",
+      "Rwanda", "Burundi", "Kenya", "Tanzania", "Seychelles", "Comoros", "Madagascar", "Mozambique",
+      "Zambia", "Zimbabwe", "Namibia", "Botswana", "South Africa", "Lesotho", "Eswatini", "Malawi",
+      "Angola", "Namibia", "Botswana", "Zimbabwe", "Mozambique", "South Africa", "Lesotho", "Eswatini",
+      "Malawi", "Zambia", "Tanzania", "Burundi", "Rwanda", "Uganda", "South Sudan", "Sudan", "Eritrea",
+      "Ethiopia", "Somalia", "Djibouti", "Kenya", "Comoros", "Mauritius", "Seychelles"
+    ],
+    "Australia": [
+      "Australia", "Papua New Guinea", "Solomon Islands", "Vanuatu", "New Caledonia", "Fiji",
+      "Tuvalu", "Nauru", "Kiribati", "Marshall Islands", "Micronesia", "Palau"
+    ],
+    "Antarctica": [
+      "Antarctica"
+    ]
+  }
+}

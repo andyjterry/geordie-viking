@@ -11,4 +11,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  serverMiddleware: ['~/proxy.js'], // Add this line to use the proxy middleware
 });
