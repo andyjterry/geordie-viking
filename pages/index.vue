@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>Geordie Viking : Coming Soon</h1>
-<!--    <current-travel/>-->
-<!--    <upcoming-trips/>-->
-<!--    <travel-solo-trips-summary/>-->
+    <current-travel/>
+    <upcoming-trips/>
+    <travel-solo-trips-summary/>
 <!--  <inspire-quotes/>-->
     <european-countries/>
 <!--    <all-countries-by-continent/>-->
