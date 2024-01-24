@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  head: {
+    title: 'Geordie Viking',
+  },
   devtools: { enabled: true },
   build: {
     postcss: {

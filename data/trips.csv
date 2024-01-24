@@ -1,0 +1,41 @@
+City,Country,Arrival Date,Arrival Time,Departure Date,Departure Time,Solo Travel,Travel Companions,Reason for Travel,Do you Fly,Flight Cost,Accommodation Type,Accommodation Name(s),Accommodation Cost(s),Accommodation Rating,Accommodation Review,Brief Trip Review
+Snowdonia,United Kingdom,15/5/1999,,15/5/1999,,FALSE,Cadets,city break,TRUE,,camping,Raf Capel Curig,,,,
+Torrevieja,Spain,08/08/2000,,08/08/2000,,FALSE,Mam, Rachael,family holiday,TRUE,,hotel,,,,,
+Falaraki,Greece,15/7/2003,,15/7/2003,,FALSE,Aaron Whitfield,beach,TRUE,,hotel,,,,,
+Malia,Greece,15/7/2004,,15/7/2004,,FALSE,Aaron Whitfield,beach,TRUE,,hotel,,,,,
+Aiya Napa,Cyprus,15/7/2005,,15/7/2005,,FALSE,Aaron Whitfield,beach,TRUE,,hotel,,,,,
+Playa Paraiso,Spain,15/7/2006,,15/7/2006,,FALSE,Donna,family holiday,TRUE,,hotel,,,,,
+Port El Kantoui,Tunisia,15/7/2006,,15/7/2006,,FALSE,Donna,family holiday,TRUE,,hotel,,,,,
+Palmanova,Spain,15/7/2008,,15/7/2008,,FALSE,Donna,family holiday,TRUE,,hotel,,,,,
+Sunny Beach,Bulgaria,15/8/2008,,15/8/2008,,FALSE,Donna,family holiday,TRUE,,hotel,,,,,
+Paris,France,20/5/2010,,20/5/2010,,FALSE,Donna,family holiday,TRUE,,hotel,,,,,
+Alcudia,Spain,16/4/2017,,16/4/2017,,FALSE,Hayley,beach,TRUE,,hotel,,,,,
+Santa Susanna,Spain,19/08/2019,,19/08/2019,,FALSE,Hayley,family holiday,TRUE,,hotel,,,,,
+Faro,Portugal,1/4/2022,12:00,6/4/2022,6:00,TRUE,Solo,last minute trip,TRUE,54,hostel,Blife Sun Hostel,54,6,The accommodation was close to the airport, great for first-time solo travellers...,The trip was great, I will write a blog post soon
+Krakow,Poland,28/4/22,10:00,1/5/22,10:00,TRUE,Solo,last minute trip,TRUE,11,hostel,Das Hostel,20,4,Accommodation did its job, basic.,The trip was great, I will write a blog post soon
+Chania,Greece,13/5/22,10:00,20/2/22,10:00,TRUE,Solo,beach,TRUE,5.94,hostel,Cocoon City Hostel,90,8,Fantastic hostel, swimming pool, near the beach, clean...,The trip was great, I will write a blog post soon
+Antalya,Turkey,24/6/2022,10:00,1/7/2022,10:00,FALSE,TJ, Jaymes, Emily,family holiday,TRUE,600,hotel,Eftalia Splash,2000,8,Great Family Hotel,The trip was great, I will write a blog post soon
+Dublin,Ireland,18/8/22,23:00,19/8/22,18:00,TRUE,Solo,city break,TRUE,11,,McDonalds,0,1,Ended up sitting in a McDonald's from midnight until 7am,The trip was great, I will write a blog post soon
+Augsburg,Germany,20/8/22,18:00,23/8/22,18:00,TRUE,Solo,city break,TRUE,40,couchsurf,Laura's House,80,10,Laura was the perfect guess,The trip was great, I will write a blog post soon
+Pescara,,23/8/22,20:00,24/8/22,3:15,TRUE,Solo,last minute trip,TRUE,18,hostel,A Street,0,2,Wasn't as comfy as McDonald's in Dublin,The trip was great, I will write a blog post soon
+Rome,Italy,24/08/22,5:00,26/08/22,6:00,TRUE,Solo,city break,FALSE,10,hostel,Legend R.G,28,6,Did its job,The trip was great, I will write a blog post soon
+Vatican City,,24/08/22,11:00,24/08/22,12:30,TRUE,Solo,last minute trip,TRUE,,,,,,The trip was great, I will write a blog post soon
+Edinburgh,United Kingdom,26/08/22,9:30,26/08/22,10:00,TRUE,Solo,last minute trip,TRUE,,,,,,The trip was great, I will write a blog post soon
+Riga,Latvia,16/09/22,10:00,18/09/22,16:00,TRUE,Solo,last minute trip,TRUE,,hostel,Tree House Hostel,35,,The trip was great, I will write a blog post soon
+Krakow,Poland,18/09/22,18:00,20/09/22,8:00,TRUE,Solo,last minute trip,TRUE,,hostel,The Little Havana Party Hostel, Atlantis Hostel,30,30,,The trip was great, I will write a blog post soon
+Bangkok,Thailand,05/03/23,9:00,06/09/23,6:00,TRUE,Solo,last minute trip,TRUE,,hostel,Ploy Hostel,3.6,,,
+Koh Phangan,Thailand,06/03/23,14:00,08/03/23,9:00,TRUE,Solo,last minute trip,TRUE,,hostel,Sleep Tight Hostel,34,,,
+Koh Samui,Thailand,08/03/23,12:00,10/03/23,6:00,TRUE,Solo,last minute trip,TRUE,,hotel,First Bungalow Beach Resort,71,,,
+Ao Nang,Thailand,10/03/23,10:00,13/03/23,16:00,TRUE,Solo,last minute trip,TRUE,,hotel,Ao Nang Colors Hotel,102,,,
+Patong,Thailand,13/03/23,18:00,15/03/23,10:00,TRUE,Solo,last minute trip,TRUE,,hostel,BearPacker Hostel,26,,,
+Naiyang Beach,Thailand,15/03/23,12:00,16/03/23,8:00,TRUE,Solo,last minute trip,TRUE,,hostel,The Luna,14,,,
+Bangkok,Thailand,16/03/23,10:00,18/03/23,22:00,TRUE,Solo,last minute trip,TRUE,,hotel,Rambuttri Village Plaza,36,,,
+Alicante,Spain,04/05/23,9:00,10/05/23,14:00,TRUE,Solo,last minute trip,TRUE,,hostel,Market Hostel, Chameleon Youth Hostel,37,12.50,,,
+Benidorm,Spain,06/05/23,14:00,09/05/23,9:00,TRUE,Solo,last minute trip,TRUE,,hostel,Hostel Welcome Benidorm,67,,,
+Krakow,Poland,15/05/23,17:00,17/05/23,9:00,TRUE,TJ,last minute trip,TRUE,,Apartment,VisitKrak Apartment,70,,,
+Naples,Italy,23/07/23,9:00,28/07/23,13:00,TRUE,Solo,last minute trip,TRUE,140,hostel,Sahary,52,,,
+Sorrento,Italy,26/07/23,9:00,27/07/23,15:00,TRUE,Solo,last minute trip,TRUE,,Apartment,Hotel Rivage,95,,,
+Dublin,Ireland,27/10/23,23:00,28/10/23,23:00,TRUE,Solo,last minute trip,TRUE,15,Apartment,Camden Court Hotel,140,,,
+Edinburgh,United Kingdom,22/10/23,21:00,23/10/23,20:00,TRUE,Emily, Jaymes,last minute trip,TRUE,60,Apartment,The Residence - 47 Minto Street,155,,,
+Gran Canaria,Spain,31/12/23,6:00,05/01/24,16:00,TRUE,Solo,last minute trip,TRUE,225,hostel,Compass House,135,,,
+Gran Canaria,Spain,26/01/23,6:00,04/02/24,16:00,TRUE,TJ,last minute trip,TRUE,70,hostel,Apartmento Salitre Canteras,357,,,
