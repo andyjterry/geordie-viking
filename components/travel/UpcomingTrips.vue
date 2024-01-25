@@ -5,10 +5,8 @@
       <ul>
         <li v-for="trip in upcomingTrips" :key="trip.id">
           <h3>{{ trip.city }}, {{ trip.country }}</h3>
-          <p>Arrival Date: {{ trip.arrivalDate }}</p>
-          <p>Departure Date: {{ trip.departureDate }}</p>
-          <!-- Remove the duration calculation as the function is no longer available -->
-          <!-- Add other trip details here -->
+          <p>Arrival Date: {{ formatDate(trip.arrivalDate) }}</p>
+          <p>Departure Date: {{ formatDate(trip.departureDate) }}</p>
         </li>
       </ul>
     </div>
@@ -30,10 +28,16 @@ export default {
   },
   methods: {
     getUpcomingTrips() {
-      const currentDate = new Date().toISOString().split('T')[0];
+      const currentDate = new Date();
       this.upcomingTrips = travelData.travels.filter((trip) => {
-        return trip.arrivalDate > currentDate;
+        const arrivalDate = new Date(trip.arrivalDate);
+        const departureDate = new Date(trip.departureDate);
+        return arrivalDate <= currentDate && departureDate >= currentDate;
       });
+    },
+    formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString(undefined, options);
     },
   },
 };

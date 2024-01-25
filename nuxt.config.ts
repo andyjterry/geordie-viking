@@ -1,54 +1,27 @@
-// import { defineNuxtConfig, NuxtConfig } from 'nuxt/config';
-//
-// interface ExtendedConfig extends NuxtConfig {
-//   head: {
-//     title: 'Geordie Viking';
-//     meta: [
-//       { charset: 'utf-8' },
-//       { name: 'viewport'; content: 'width=device-width, initial-scale=1' },
-//       // Add other meta tags as needed
-//     ];
-//     link: [
-//       // Add links for favicons, icons, etc.
-//     ];
-//     // Other head elements like scripts, styles, etc.
-//   };
-//
-//   devtools: { enabled: true };
-//   // css: ['~/dist/tailwind.css'];
-//   css: ['~/assets/css/tailwind.css'];
-//
-//   postcss: {
-//     plugins: {
-//       tailwindcss: {};
-//       autoprefixer: {};
-//     };
-//   };
-//
-//   serverMiddleware: ['~/proxy.js'];
-// }
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
+// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 export default {
-  head: {
-    title: 'Geordie Viking',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // Add other meta tags as needed
-    ],
-    link: [
-      // Add links for favicons, icons, etc.
-    ],
-    // Other head elements like scripts, styles, etc.
+  layout: 'default',
+  buildModules: [],
+  head: {},
+
+  modules: ['@nuxtjs/tailwindcss'],
+  styleResources: {
+    scss: ['~assets/css/main.scss'],
   },
-  css: ['~/assets/css/tailwind.css'],
-  build: {
-    postcssOptions: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+  css: ['~/assets/css/main.scss'],
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+  },
+  postcss: {
+    plugins: {
+      autoprefixer: {},
     },
   },
-  serverMiddleware: ['~/proxy.js'],
 };

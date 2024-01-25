@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port 4000",
+    "dev": "yarn nuxt dev --port 4000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "build:tailwind": "tailwindcss -i ./assets/scss/main.scss -o ./dist/tailwind.css"
+    "csvToJson": "node --experimental-specifier-resolution=node scripts/csvToJson.cjs"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^3.0.2",
     "autoprefixer": "^10.4.17",
     "http-proxy-middleware": "^2.0.6",
     "nuxt": "^3.9.3",
@@ -25,7 +26,10 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.17",
     "@heroicons/vue": "^2.1.1",
-    "axios": "^1.6.5"
+    "@nuxtjs/tailwindcss": "^6.11.1",
+    "axios": "^1.6.5",
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security"
   },
   "engines": {
     "node": "18.x"
