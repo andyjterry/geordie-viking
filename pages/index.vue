@@ -1,16 +1,15 @@
   <template>
     <div>
-      <navigation/>
-
+      <hero-with-tiles/>
 <!--      <h1>Geordie Viking</h1>-->
 <!--      <current-travel/>-->
 <!--      <upcoming-trips/>-->
 <!--      <travel-solo-trips-summary/>-->
 <!--    <inspire-quotes/>-->
-      <european-countries/>
+<!--      <european-countries/>-->
 
   <!--    <all-countries-by-continent/>-->
-      <test-component/>
+<!--      <test-component/>-->
     </div>
   </template>
 
@@ -22,6 +21,7 @@
   import EuropeanCountries from "../components/travel/EuropeanCountries.vue";
   import AllCountriesByContinent from "../components/travel/AllCountriesByContinent.vue";
   import TestComponent from "../components/navigation/TestComponent.vue";
+  import HeroWithTiles from "../components/hero/HeroWithTiles.vue";
 
   export default {
     name: 'index',
