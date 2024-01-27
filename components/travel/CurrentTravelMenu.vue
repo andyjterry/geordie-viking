@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden lg:flex lg:flex-1 flex-col lg:justify-end text-right text-xs">
+  <div class="flex lg:flex-1 flex-col lg:justify-end text-right text-xs">
     <div v-if="currentTravel">
       <p>
         Currently in {{ currentTravel.city }}, {{ currentTravel.country }}.

@@ -13,7 +13,7 @@
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           @click="mobileMenuOpen = true"
         >
           <span class="sr-only">Open main menu</span>
@@ -205,11 +205,7 @@
           </transition>
         </Popover>
       </PopoverGroup>
-      <!--      <div class="hidden lg:flex lg:flex-1 lg:justify-end">-->
-      <!--        <a href="#" class="text-md font-semibold leading-6 text-gray-900"-->
-      <!--          >Contact <span aria-hidden="true">&rarr;</span></a-->
-      <!--        >-->
-      <!--      </div>-->
+
       <current-travel-menu />
     </nav>
     <Dialog
@@ -228,7 +224,7 @@
               <span class="sr-only">Geordie Viking</span>
               <img
                 class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="@/assets/images/logo/logo.png"
                 alt=""
               />
             </a>
@@ -341,30 +337,42 @@ const articles = [
     description: 'Discover tips and insights for personal development',
     href: '#',
     icon: SquaresPlusIcon,
+    postCount: 14,
   },
   {
     name: 'Confidence Building',
     description: 'Boost your self-confidence and overcome challenges',
     href: '#',
     icon: SquaresPlusIcon,
+    postCount: 4,
   },
   {
     name: 'Adventure Travel',
     description: 'Explore the world through solo travel adventures',
     href: '#',
     icon: SquaresPlusIcon,
+    postCount: 24,
   },
   {
     name: 'Mindset Mastery',
     description: 'Learn strategies to master your mindset and achieve goals',
     href: '#',
     icon: SquaresPlusIcon,
+    postCount: 3,
   },
   {
     name: 'Health and Wellness',
     description: 'Discover tips for a healthy lifestyle and well-being',
     href: '#',
     icon: SquaresPlusIcon,
+    postCount: 1,
+  },
+  {
+    name: 'Be Inspired',
+    description: 'A curation of inspiring stories and quotes',
+    href: '#',
+    icon: SquaresPlusIcon,
+    postCount: 0,
   },
 ];
 const recommends = [
