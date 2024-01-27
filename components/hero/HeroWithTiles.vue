@@ -25,10 +25,10 @@
                 <p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">Welcome, my name is Andy also known as the Geordie Viking, this is a sanctuary crafted by me for aspiring Solo Vikings seeking a life defined by newfound confidence, meaningful connections, and limitless exploration. In a world often filled with uncertainty and challenges, I'm here to be your guiding light on this transformative voyage. My mission is simple yet profound: to empower you to build in  confidence, forge deep connections, and embark on a lifelong adventure of self-discovery.
 
                   I'll be your fellow traveler, sharing my adventures, my moments of growth, the lessons I've learned, and yes, even the struggles. I believe in the power of honesty and authenticity. Whether you're taking your first steps toward personal growth or seeking inspiration to step outside your comfort zone, the Geordie Viking community, known as the Solo Vikings, is here to provide support, encouragement, and a shared journey. Together, we'll set sail toward a horizon of boundless possibilities and transformation.</p>
-                <div class="mt-10 flex items-center gap-x-6">
-                  <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-                  <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Live demo <span aria-hidden="true">→</span></a>
-                </div>
+                <h3 class="mt-10 text-xl font-semibold text-gray-900">We are a work in progress</h3>
+                <p class="mt-2 text-gray-600">
+                  You might be wondering why we don't have much here yet. Well, I am currently traveling and working on developing this site when I can. As a software developer, I'm building this website from scratch, without the use of a CMS or WordPress. It may not take long, but you will notice changes on a daily basis as this website continues to develop.
+                </p>
               </div>
               <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                 <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">

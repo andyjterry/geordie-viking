@@ -8,13 +8,6 @@
     <div class="grid grid-cols-2 gap-4">
       <div v-for="(trips, country) in sortedGroupedTrips" :key="country">
         <div class="bg-white p-4 rounded shadow relative">
-          <!-- Add flag image -->
-          <img
-              v-if="flagImages[country]"
-              :src="flagImages[country]"
-              alt="Country Flag"
-              class="absolute top-2 right-2 w-8 h-8"
-          />
           <h4 class="font-bold">{{ country }}</h4>
           <div class="absolute top-2 right-16 bg-blue-500 text-white px-2 py-1 rounded-full text-sm">
             {{ trips.length }} Visits
@@ -61,11 +54,6 @@ import allCountriesData from '@/json/allCountries.json';
 import travelData from '@/json/travelData.json';
 
 export default {
-  data() {
-    return {
-      flagImages: {},
-    };
-  },
   computed: {
     totalEuropeanCountriesVisited() {
       const europeanCountries = allCountriesData.continents.Europe;
@@ -156,17 +144,6 @@ export default {
     },
   },
   methods: {
-    async getFlagImage(country) {
-      try {
-        // Use dynamic import to load the flag image
-        const flagImage = await import(`@/assets/images/flags/${country.toLowerCase()}.png`);
-        return flagImage.default;
-      } catch (error) {
-        // Handle the case where the image doesn't exist
-        console.error(`Flag image for ${country} not found.`);
-        return null;
-      }
-    },
     formatDate(dateString) {
       const options = { year: 'numeric', month: 'long' };
       return new Date(dateString).toLocaleDateString(undefined, options);
