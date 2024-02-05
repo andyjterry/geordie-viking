@@ -21,189 +21,10 @@
         </button>
       </div>
       <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-        <Popover class="relative">
-          <PopoverButton
-            class="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900"
-          >
-            Articles
-            <ChevronDownIcon
-              class="h-5 w-5 flex-none text-gray-400"
-              aria-hidden="true"
-            />
-          </PopoverButton>
-
-          <transition
-            enter-active-class="transition ease-out duration-200"
-            enter-from-class="opacity-0 translate-y-1"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150"
-            leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1"
-          >
-            <PopoverPanel
-              class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
-            >
-              <div class="p-4">
-                <div
-                  v-for="item in articles"
-                  :key="item.name"
-                  class="group relative flex gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-gray-50"
-                >
-                  <div
-                    class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
-                  >
-                    <component
-                      :is="item.icon"
-                      class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div class="flex-auto">
-                    <a
-                      :href="item.href"
-                      class="block font-semibold text-gray-900"
-                    >
-                      {{ item.name }}
-                      <span class="absolute inset-0" />
-                    </a>
-                    <p class="mt-1 text-gray-600">{{ item.description }}</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50"
-              >
-                <a
-                  v-for="item in callsToAction"
-                  :key="item.name"
-                  :href="item.href"
-                  class="flex items-center justify-center gap-x-2.5 p-3 text-md font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                >
-                  <component
-                    :is="item.icon"
-                    class="h-5 w-5 flex-none text-gray-400"
-                    aria-hidden="true"
-                  />
-                  {{ item.name }}
-                </a>
-              </div>
-            </PopoverPanel>
-          </transition>
-        </Popover>
-        <!--Recommendations-->
-        <!--        <Popover class="relative">-->
-        <!--          <PopoverButton-->
-        <!--            class="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900"-->
-        <!--          >-->
-        <!--            Recommendations-->
-        <!--            <ChevronDownIcon-->
-        <!--              class="h-5 w-5 flex-none text-gray-400"-->
-        <!--              aria-hidden="true"-->
-        <!--            />-->
-        <!--          </PopoverButton>-->
-
-        <!--          <transition-->
-        <!--            enter-active-class="transition ease-out duration-200"-->
-        <!--            enter-from-class="opacity-0 translate-y-1"-->
-        <!--            enter-to-class="opacity-100 translate-y-0"-->
-        <!--            leave-active-class="transition ease-in duration-150"-->
-        <!--            leave-from-class="opacity-100 translate-y-0"-->
-        <!--            leave-to-class="opacity-0 translate-y-1"-->
-        <!--          >-->
-        <!--            <PopoverPanel-->
-        <!--              class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"-->
-        <!--            >-->
-        <!--              <div class="p-4">-->
-        <!--                <div-->
-        <!--                  v-for="item in recommends"-->
-        <!--                  :key="item.name"-->
-        <!--                  class="group relative flex gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-gray-50"-->
-        <!--                >-->
-        <!--                  <div-->
-        <!--                    class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"-->
-        <!--                  >-->
-        <!--                    &lt;!&ndash; Use the appropriate icon component for the item &ndash;&gt;-->
-        <!--                    <component-->
-        <!--                      :is="item.icon"-->
-        <!--                      class="h-6 w-6 text-gray-600 group-hover:text-indigo-600"-->
-        <!--                      aria-hidden="true"-->
-        <!--                    />-->
-        <!--                  </div>-->
-        <!--                  <div class="flex-auto">-->
-        <!--                    <a-->
-        <!--                      :href="item.href"-->
-        <!--                      class="block font-semibold text-gray-900"-->
-        <!--                    >-->
-        <!--                      {{ item.name }}-->
-        <!--                      <span class="absolute inset-0" />-->
-        <!--                    </a>-->
-        <!--                    <p class="mt-1 text-gray-600">{{ item.description }}</p>-->
-        <!--                  </div>-->
-        <!--                </div>-->
-        <!--              </div>-->
-        <!--              <div-->
-        <!--                class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50"-->
-        <!--              >-->
-        <!--                &lt;!&ndash; Add your calls to action here if needed &ndash;&gt;-->
-        <!--                &lt;!&ndash; Example:-->
-        <!--                <a :href="ctaItem.href" class="flex items-center justify-center gap-x-2.5 p-3 text-md font-semibold leading-6 text-gray-900 hover:bg-gray-100">-->
-        <!--                  <component :is="ctaItem.icon" class="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />-->
-        <!--                  {{ ctaItem.name }}-->
-        <!--                </a>-->
-        <!--                &ndash;&gt;-->
-        <!--              </div>-->
-        <!--            </PopoverPanel>-->
-        <!--          </transition>-->
-        <!--        </Popover>-->
-
-        <a href="#" class="text-md font-semibold leading-6 text-gray-900"
-          >Travel</a
-        >
-        <a href="#" class="text-md font-semibold leading-6 text-gray-900"
-          >Mindset</a
-        >
-
-        <Popover class="relative">
-          <PopoverButton
-            class="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900"
-          >
-            Solo Vikings
-            <ChevronDownIcon
-              class="h-5 w-5 flex-none text-gray-400"
-              aria-hidden="true"
-            />
-          </PopoverButton>
-
-          <transition
-            enter-active-class="transition ease-out duration-200"
-            enter-from-class="opacity-0 translate-y-1"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150"
-            leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1"
-          >
-            <PopoverPanel
-              class="absolute -left-8 top-full z-10 mt-3 w-96 rounded-3xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5"
-            >
-              <div
-                v-for="item in soloVikings"
-                :key="item.name"
-                class="relative rounded-lg p-4 hover:bg-gray-50"
-              >
-                <a
-                  :href="item.href"
-                  class="block text-md font-semibold leading-6 text-gray-900"
-                >
-                  {{ item.name }}
-                  <span class="absolute inset-0" />
-                </a>
-                <p class="mt-1 text-md leading-6 text-gray-600">
-                  {{ item.description }}
-                </p>
-              </div>
-            </PopoverPanel>
-          </transition>
-        </Popover>
+        <NavigationItem label="Travel" to="/travel" />
+        <NavigationItem label="Mindset" to="/mindset" />
+        <PopoverNavigationItem label="Articles" :items="articles" />
+        <PopoverNavigationItem label="Solo Vikings" :items="soloVikings" />
       </PopoverGroup>
 
       <current-travel-menu />
@@ -260,7 +81,7 @@
               </div>
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="/travel"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Travel</a
                 >
@@ -306,6 +127,8 @@
 
 <script setup>
 import CurrentTravelMenu from "../components/travel/CurrentTravelMenu.vue";
+import PopoverNavigationItem from '../components/navigationUI/PopoverNavigationItem.vue';
+import NavigationItem from '../components/navigationUI/NavigationItem.vue';
 import { ref } from 'vue';
 import {
   Dialog,

@@ -1,10 +1,10 @@
 <template>
-  <div></div>
+  <div>Travel</div>
 </template>
 
 <script>
 export default {
-  name: 'index',
+  name: 'travel',
   // component options here
 };
 </script>
